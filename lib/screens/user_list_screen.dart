@@ -1,4 +1,5 @@
 // Showing List of users
+// Pagination applied
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:techy_panther_task/screens/add_new_user.dart';
@@ -121,11 +122,11 @@ class _UserListPageState extends State<UserListPage> {
                     crossAxisCount: 2,
                   ),
                 ),
-                controller.isLoading.value? Positioned(
-                    child: Container(
+                controller.isLoading.value? const Positioned(
+                    child: SizedBox(
                       height: 80,
                   width: double.infinity,
-                  child: const Center(child: CircularProgressIndicator()),
+                  child: Center(child: CircularProgressIndicator()),
                 )):const SizedBox()
               ],
             );
